@@ -23,9 +23,10 @@
 		 * @param Interfaces\Request $request The current request being made
 		 * @param Interfaces\Response $response The current response
 		 */
-		static private function callAction($router, $action, $request, $response)
+		static private function callAction($action, $app, $router, $request, $response)
 		{
 			$context = [
+				'app'      => $app,
 				'request'  => $request,
 				'response' => $response,
 				'router'   => $router
